@@ -89,12 +89,16 @@ T* SortedListDoublyLinked<T>::remove(DoubleNode<T>* curr)
 	   prev->setNext(NULL);
 	   curr->setPrev(NULL);
 	   loc = prev;
-   }else
+   }else if(prev == NULL && after == NULL)
    {
 	   curr->setPrev(NULL);
 	   curr->setNext(NULL);
+	   loc = NULL;
+   }else
+   {
 	   prev->setNext(after);
 	   after->setPrev(prev);
+	   loc = prev;
    }
    sze--;
    delete curr;

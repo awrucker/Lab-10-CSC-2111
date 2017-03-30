@@ -4,7 +4,8 @@
 #include "QueueLinked.h"
 using CSC2110::QueueLinked;
 #include "SortedListDoublyLinked.h"
-
+#include <iostream>
+using namespace std;
 template < class T >
 class Hybrid
 {
@@ -46,6 +47,7 @@ Hybrid<T>::~Hybrid()
 template < class T >
 bool Hybrid<T>::isEmpty()
 {
+	cout<<sldl->size()<<endl;
 	return q->isEmpty();
 }
 
@@ -64,7 +66,7 @@ T* Hybrid<T>::dequeue()
 }
 
 template < class T >
-ListDoublyLinkedIterator<T>* Hybrid::iterator()
+ListDoublyLinkedIterator<T>* Hybrid<T>::iterator()
 {
 	ListDoublyLinkedIterator<T>* iterator =  sldl->iterator();
 	return iterator;
