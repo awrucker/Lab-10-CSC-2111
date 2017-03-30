@@ -1,13 +1,18 @@
+/*
+	William Stump && Adam Rucker
+	Lab 10/Hybrid ADT
+	3/30/17
+*/	
 #if !defined (HYBRID_H)
 #define HYBRID_H
 
 #include "QueueLinked.h"
 using CSC2110::QueueLinked;
 #include "SortedListDoublyLinked.h"
-/*	These were for testing purposes
+//	These were for testing purposes
 #include <iostream>
 using namespace std;
-*/
+
 template < class T >
 class Hybrid
 {
@@ -31,7 +36,7 @@ class Hybrid
 template < class T >
 Hybrid<T>::Hybrid(int (*comp_items) (T* item_1, T* item_2), int (*comp_keys) (String* key, T* item))
 {
-   q = new QueueLinked<DoubleNode<T>>();
+   q = new QueueLinked<DoubleNode <T> >();
    sldl = new SortedListDoublyLinked<T>(comp_items, comp_keys);
 }
 
@@ -50,6 +55,8 @@ Hybrid<T>::~Hybrid()
 template < class T >
 bool Hybrid<T>::isEmpty()
 {
+	//this line was for testing to make sure all of the data was deleted.
+	//cout<<sldl->size()<<endl;
 	return q->isEmpty();
 }
 
