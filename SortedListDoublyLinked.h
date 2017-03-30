@@ -37,8 +37,15 @@ class SortedListDoublyLinked
       ~SortedListDoublyLinked();
 	  
 	  DoubleNode<T>* addDN(T* item);//moved from private to public for the second implementation of the Hybrid ADT
-      T* remove(DoubleNode<T>* curr);//moved from private to public for the second implementation of the hybrid adt
-	  
+      /*
+		Pre: Receives a DoubleNode<T>* current
+		Post: Removes the current and redoes how the list is linked
+	  */	
+	  T* remove(DoubleNode<T>* curr);//moved from private to public for the second implementation of the hybrid adt
+	  /*
+		Pre:
+		Post Returns whether the sortedListdoublylinked is empty
+		*/
 	  bool isEmpty();
       int size();
       void removeAll();
