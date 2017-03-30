@@ -10,9 +10,9 @@
 using CSC2110::QueueLinked;
 #include "SortedListDoublyLinked.h"
 //	These were for testing purposes
-#include <iostream>
+/*#include <iostream>
 using namespace std;
-
+*/
 template < class T >
 class Hybrid
 {

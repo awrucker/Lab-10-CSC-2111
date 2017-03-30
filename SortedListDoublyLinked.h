@@ -1,3 +1,8 @@
+/*
+	William Stump && Adam Rucker
+	Lab 10/Hybrid ADT
+	3/30/17
+*/	
 #if !defined (SLDL_H)
 #define SLDL_H
 
