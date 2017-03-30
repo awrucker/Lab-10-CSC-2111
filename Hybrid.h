@@ -60,12 +60,8 @@ T* Hybrid<T>::dequeue()
 }
 ListDoublyLinkedIterator<T>* Hybrid::iterator()
 {
-<<<<<<< HEAD
 	ListDoublyLinkedIterator<T>* iterator =  sldl->iterator();
 	return iterator;
-=======
-
->>>>>>> 69bfd344f521398643f85c854c9cdbe616851184
 }
 
 
