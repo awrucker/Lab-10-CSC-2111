@@ -48,14 +48,18 @@ int main()
    while(iter->hasNext())
    {
       CD* cd = iter->next();
-      cd->displayCD();
+      //cd->displayCD();
+	  cd->getKey()->displayString();
+	  cout<<endl;
    }
    delete iter;
-
+   cout<<"-----------------------------------------------------\nChanging from sorted list to unsorted\n-------------------------------\n";
    while(!(h->isEmpty()))
    {
       CD* cd = h->dequeue();
-      cd->displayCD();
+      //cd->displayCD();
+	  cd->getKey()->displayString();
+	  cout<<endl;
    }
    delete h;
 
