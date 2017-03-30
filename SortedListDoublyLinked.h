@@ -18,8 +18,8 @@ class SortedListDoublyLinked
       DoubleNode<T>* locateNodeRemove(String* sk);
       DoubleNode<T>* locateNodeAdd(T* item);
 
-      DoubleNode<T>* addDN(T* item);
-      T* remove(DoubleNode<T>* curr);
+      
+      
 
       DoubleNode<T>* findHead();
       DoubleNode<T>* findTail();
@@ -30,8 +30,11 @@ class SortedListDoublyLinked
    public:
       SortedListDoublyLinked(int (*comp_items) (T* item_1, T* item_2), int (*comp_keys) (String* key, T* item));
       ~SortedListDoublyLinked();
-
-      bool isEmpty();
+	  
+	  DoubleNode<T>* addDN(T* item);//moved from private to public for the second implementation of the Hybrid ADT
+      T* remove(DoubleNode<T>* curr);//moved from private to public for the second implementation of the hybrid adt
+	  
+	  bool isEmpty();
       int size();
       void removeAll();
 
