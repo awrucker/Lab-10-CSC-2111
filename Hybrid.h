@@ -2,17 +2,19 @@
 	William Stump && Adam Rucker
 	Lab 10/Hybrid ADT
 	3/30/17
-*/	
+*/
 #if !defined (HYBRID_H)
 #define HYBRID_H
 
 #include "QueueLinked.h"
 using CSC2110::QueueLinked;
 #include "SortedListDoublyLinked.h"
+
 //	These were for testing purposes
 /*#include <iostream>
 using namespace std;
 */
+
 template < class T >
 class Hybrid
 {
@@ -26,8 +28,14 @@ class Hybrid
       Hybrid(int (*comp_items) (T* item_1, T* item_2), int (*comp_keys) (String* key, T* item));
       ~Hybrid();
 
-      bool isEmpty();
+      bool isEmpty();//returns boolean from queue isEmpty
+
+      //pre: receives a T* item
+      //post: adds reference to T* in the ADT
       void enqueue(T* item);
+
+      //pre: nothing
+      //post: removes an item from ADT and returns it
       T* dequeue();
       ListDoublyLinkedIterator<T>* iterator();
 
@@ -79,13 +87,12 @@ template <class T>
 void Hybrid<T>::enqueue(T* item)
 {
 	q->enqueue(sldl->addDN(item));
-	//q->enqueue(x);
 }
 template <class T>
 T* Hybrid<T>::dequeue()
 {
 	DoubleNode<T>* item = q->dequeue();
-	sldl->remove(item);
+	return sldl->remove(item);
 }
 
 template < class T >
@@ -94,8 +101,5 @@ ListDoublyLinkedIterator<T>* Hybrid<T>::iterator()
 	ListDoublyLinkedIterator<T>* iterator =  sldl->iterator();
 	return iterator;
 }
-
-
-
 
 #endif
