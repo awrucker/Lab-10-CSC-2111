@@ -4,8 +4,10 @@
 #include "QueueLinked.h"
 using CSC2110::QueueLinked;
 #include "SortedListDoublyLinked.h"
+/*	These were for testing purposes
 #include <iostream>
 using namespace std;
+*/
 template < class T >
 class Hybrid
 {
@@ -47,24 +49,24 @@ Hybrid<T>::~Hybrid()
 template < class T >
 bool Hybrid<T>::isEmpty()
 {
-	cout<<sldl->size()<<endl;
 	return q->isEmpty();
 }
 
-template < class T >
+/*template < class T >
 void Hybrid<T>::enqueue(T* item)
 {
 	q->enqueue(item);
 	sldl->add(item);
 }
 
-template < class T >
+*/
+/*template < class T >
 T* Hybrid<T>::dequeue()
 {
 	T* item = q->dequeue();
 	sldl->remove(item->getKey());
 }
-
+*/
 template < class T >
 ListDoublyLinkedIterator<T>* Hybrid<T>::iterator()
 {
