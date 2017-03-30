@@ -46,15 +46,17 @@ Hybrid<T>::~Hybrid()
 
 bool Hybrid<T>::isEmpty()
 {
-	
+	return q->isEmpty();
 }
 void Hybrid<T>::enqueue(T* item)
 {
-	
+	q->enqueue(item);
+	sldl->add(item);
 }
 T* Hybrid<T>::dequeue()
 {
-	
+	T* item = q->dequeue();
+	sldl->remove(item->getKey());
 }
 ListDoublyLinkedIterator<T>* Hybrid::iterator()
 {
