@@ -94,22 +94,22 @@ T* SortedListDoublyLinked<T>::remove(DoubleNode<T>* curr)
    loc = curr;
    DoubleNode<T>* prev = curr->getPrev();
    DoubleNode<T>* after = curr->getNext();
-   if(prev == NULL && after != NULL)
+   if(prev == NULL && after != NULL)//test to see if after is not NULL and prev == NULL
    {
 	   after->setPrev(NULL);
 	   curr->setNext(NULL);
 	   loc = after;
-   }else if(prev != NULL && after == NULL)
+   }else if(prev != NULL && after == NULL)//Test to see if after is NULL and if prev is not NULL
    {
 	   prev->setNext(NULL);
 	   curr->setPrev(NULL);
 	   loc = prev;
-   }else if(prev == NULL && after == NULL)
+   }else if(prev == NULL && after == NULL)//if both are NULL then do this
    {
 	   curr->setPrev(NULL);
 	   curr->setNext(NULL);
 	   loc = NULL;
-   }else
+   }else//if both are not NULL do this
    {
 	   prev->setNext(after);
 	   after->setPrev(prev);
