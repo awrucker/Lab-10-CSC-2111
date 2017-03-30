@@ -44,7 +44,22 @@ Hybrid<T>::~Hybrid()
 //simply comment the first implementation out when working on the second implementation
 //use the getKey method to dequeue/remove
 
-
+bool Hybrid<T>::isEmpty()
+{
+	
+}
+void Hybrid<T>::enqueue(T* item)
+{
+	
+}
+T* Hybrid<T>::dequeue()
+{
+	
+}
+ListDoublyLinkedIterator<T>* Hybrid::iterator()
+{
+	
+}
 
 
 
