@@ -60,7 +60,7 @@ T* Hybrid<T>::dequeue()
 }
 ListDoublyLinkedIterator<T>* Hybrid::iterator()
 {
-	
+
 }
 
 
